@@ -15,17 +15,16 @@
   <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
   <link rel="stylesheet" type="text/css" href="CSS/style.css">
 
-  <!--
-  <meta property="og:image" content="image.png">
-
-
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  -->
+  <style>
+  
+      p {text-align: center}
+      
+  </style>
 
 </head>
 
 <body>
+  <a name="top"></a>
   <div class="topnav">
     <a class="active" href="index.html">Home</a>
     <a href="pickstore.html">Pick Store</a>
@@ -36,6 +35,7 @@
         <input type="text" placeholder="Username" name="username">
         <input type="text" placeholder="Password" name="psw">
         <button type="submit">Login</button>
+        <a href="signup.html" class="signupbutton">Join us</a>
       </form>
     </div>
   </div>
@@ -55,12 +55,50 @@
 <p>Gives access to the members menu system where other content, presets for example, and a knowlege base of musicians can hopefuly contribute to help each other solve problems</p>
 <p>Post approval and then permission to post without approval can be quick as part of a growing expanding site for all</p>
 
+<h1>Check out one of our already happy customers</h1>
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="420">
+    <source src="media/Bare%20Knuckle%20Black%20Hawk%20Alnico%20V,El%20Interior%20Del%20Primo%20Pastis(EIDPP)%20Video%20-%20www.dewa.me.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
+</div> 
+    
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
+
 <h2>Creating an article</h2>
 <p>Members will have the ability to post comments and email us to keep in contact and hopefully set up a forum for all things of interest to us decerning tone chasers.</p>
 <p>Setting this up may take a little time as we migrate from our old depricated site but we look forward to the next step in producing some of the worlds best sounding picks at a reasonable price.</p>
 <p>Donations are welcome and will contribute to both the site and towards patrons privelages in extra discounts or custom runs from our previous range and special offers</p>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self">
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_self" class="donatebutton">
   <input type="hidden" name="business" value="bobby@rjlguitars.co.uk">
   <input type="hidden" name="cmd" value="_donations">
   <input type="hidden" name="item_name" value="donate">
@@ -69,17 +107,16 @@
   <input type="hidden" name="lc" value="GB">
   <input type="hidden" name="mrb" value="YRDKF6S68Y7DS">
   <input type="hidden" name="charset" value="utf-8">
-  <input type="image" name="submit" style="border: 0;" src="images/btn_donate_LG.gif" alt="PayPal - The safer, easier way to pay online">
+  <input type="image" name="submit" style="display: block; margin: 0 auto;" src="images/btn_donate_LG.gif" alt="PayPal - The safer, easier way to pay online">
 </form>
 <br>
 
 </main>
     <footer>
-      <div>
-        <a href="#topnav">Back to Top</a>
+      <div style="text-align: center;">
+        <a href="#top">Back to top of page</a>
         <p>© 2021 carbon picks</p>
       </div>
 	</footer>
-  <script src="js/scripts.js"></script>
 </body>
 </html>
