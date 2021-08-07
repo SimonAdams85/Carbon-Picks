@@ -293,4 +293,10 @@ h1, h2 {
   }
 }
 
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+
 
